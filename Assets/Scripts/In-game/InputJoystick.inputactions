@@ -1,0 +1,33 @@
+{
+    "name": "InputJoystick",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "48d65781-d4d5-4b28-91fe-7753151077bf",
+            "actions": [
+                {
+                    "name": "move",
+                    "type": "Button",
+                    "id": "0fc438ae-7b42-41ea-bea3-d1780cd55446",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5a342114-9191-4388-a91f-381673d9f40c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -75,7 +75,22 @@ public class karakterSatuu : MonoBehaviour
             moveDirection = new Vector3(0, 0, Input.GetAxis(verticalMove));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= moveSpeed;
-            anim.SetFloat("kecepatan", moveDirection.z);
+            
+            if(moveDirection.z > 0)
+            {
+                anim.SetBool("isWalk", true);
+                anim.SetFloat("Speed", 1.0f);
+            }
+            else if (moveDirection.z < 0)
+            {
+                anim.SetBool("isWalk", true);
+                anim.SetFloat("Speed", -1.0f);
+                
+            }
+            else 
+            {
+                anim.SetBool("isWalk", false);
+            }
  
             if (Input.GetButton(jumpButton)) { 
                 anim.SetBool("lompatt", true);

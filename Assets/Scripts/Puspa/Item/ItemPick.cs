@@ -6,15 +6,12 @@ public class ItemPick : MonoBehaviour
 {
     public GameObject itemButton;
     private Inventory inventory;
-    public string buttonTake;
-    
-
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -22,7 +19,7 @@ public class ItemPick : MonoBehaviour
             {
                 if (inventory.isFull[i] == false)
                 {
-                    if (Input.GetButtonDown(buttonTake))
+                    if (Input.GetKeyDown(KeyCode.E))
                     {
                         Debug.Log("Berhasil");
                         inventory.isFull[i] = true;

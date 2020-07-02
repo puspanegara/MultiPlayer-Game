@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/stmm.unity
     guid: 94e74db8bf567b74ab8a16a3c12b7954
-  - enabled: 1
-    path: Assets/Scenes/Prolog.unity
-    guid: 0876d53d92a17f84c91aa9b4a066fcf0
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Basement.unity
     guid: e9c196969b210ac4186f48c780a7e7b5

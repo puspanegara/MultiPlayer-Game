@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     private Animator _anim;
     //Animasi pintu yang digunakan
     public Animation hingehere;
+
     // Start is called before the first frame update
     void Start()
     {

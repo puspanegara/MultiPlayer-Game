@@ -21,7 +21,7 @@ public class BukaTutup : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Diari")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

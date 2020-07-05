@@ -5,25 +5,85 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public GameObject interactText;
-    public GameObject collectText;
+    public GameObject diari;
+    public GameObject board;
+    public GameObject dokumen;
+    public GameObject piano;
 
-    private void OnCollisionEnter(Collision collision)
+    public bool isClose;
+
+    void Start()
     {
-        if(collision.gameObject.tag == "Interact")
-        {
-            interactText.SetActive(true);
-            Debug.Log("Interact");
-        }
-        else if (collision.gameObject.tag == "item")
-        {
-            collectText.SetActive(true);
-        }
+        isClose = true;    
     }
-
-    private void OnCollisionExit(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        interactText.SetActive(false);
-        collectText.SetActive(false);
+        if(other.gameObject.tag == "dairi")
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                if(isClose == true)
+                {
+                    diari.SetActive(true);
+                    isClose = false;
+                }
+                else
+                {
+                    diari.SetActive(false);
+                    isClose = true;
+                }
+            }
+        }
+
+        if (other.gameObject.tag == "board")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (isClose == true)
+                {
+                    board.SetActive(true);
+                    isClose = false;
+                }
+                else
+                {
+                    board.SetActive(false);
+                    isClose = true;
+                }
+            }
+        }
+
+        if (other.gameObject.tag == "dokumen")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (isClose == true)
+                {
+                    dokumen.SetActive(true);
+                    isClose = false;
+                }
+                else
+                {
+                    dokumen.SetActive(false);
+                    isClose = true;
+                }
+            }
+        }
+
+        if (other.gameObject.tag == "piano")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (isClose == true)
+                {
+                    piano.SetActive(true);
+                    isClose = false;
+                }
+                else
+                {
+                    piano.SetActive(false);
+                    isClose = true;
+                }
+            }
+        }
     }
 }
